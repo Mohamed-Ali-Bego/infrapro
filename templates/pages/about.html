@@ -1,0 +1,248 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <!------------------- main slide start ------------------->
+  <div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/cover3.png' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/cover2.png' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/cover4.png' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!------------------- main slide end ------------------->   
+  <!------------------- main serv start ------------------->     
+  <div class="container">
+    <div class="main-serv">
+      <div class="loow">
+        <a href="{% url 'services' %}">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <p>Services</p>
+        </a>
+      </div>
+      <div class="loow">
+        <a href="{% url 'contact' %}">
+          <i class="fa-solid fa-comments"></i>
+          <p>Contact</p>
+        </a>
+      </div>
+      <div class="loow">
+        <a href="{% url 'about' %}">
+          <i class="fa-solid fa-address-card"></i>
+          <p>About</p>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+  <!------------------- main serv end ------------------->  
+  <!------------------- contact-be whats app ------------------->     
+  <div class="contact-be">
+    <div class="whatsapp">
+      <a href="https://api.whatsapp.com/send?phone=201000970911">
+           <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+  </div> 
+  <!------------------- contact-be whats app ------------------->  
+
+<div class="containers fff">
+    <div class="about-title">
+      <h1>About Us</h1>
+      <br/>
+    </div>
+    <div class="parent">
+      <div class="chiled about">
+        <div class="container">
+          <div class="img1">
+            <img src="{% static 'img/ab.png' %}" alt="">
+          </div>
+           <div class="titel about">
+            <h2>Company Overview : </h2>
+            <p>We are a pioneer in the field of low current systems,
+               integrated systems contracting, and integrated home control
+                through smart homes. We have proudly been serving the Egyptian
+                 market since 2017. We specialize in providing integrated 
+                 solutions designed to meet the diverse needs of small and 
+                 medium-sized businesses and large projects. Our business
+                  extends to include sales, installation and support of 
+                  large-scale security and protection systems, in addition
+                   to providing telecommunications products.</p> 
+           </div>
+        </div>   
+
+      </div>
+      <div class="chiled about eff">
+        <div class="container">
+          <div class="">
+            <img src="{% static 'img/about (2).png' %}" alt="">
+          </div>
+           <div class="titel about ">
+            <h2>Our Business :</h2>
+            <p>INFRATECH company works in difficult market
+               environments and despite frequent price changes
+               , our company tries to fix the price with the customer 
+               for the maximum period, and gives priority to the highly
+                efficient product. And provide the products required by 
+                the owner according to the types known to him or nominated
+                 by our company. We are committed to providing specially 
+                 designed information technology solutions.
+            </p> 
+           </div>
+        </div>           
+      </div>
+
+      <div class="chiled about">
+        <div class="container ">
+        <div class="d-link">
+            <img src="{% static 'img/about (6).png' %}" alt="">
+          </div>         
+        <div class="titel about">
+          <h2>Our Objective :</h2>
+          <p>our goal is to provide the best service to customers,
+             achieve interconnection between our company and customers,
+              and meet all the customer’s requirements in terms of systems
+               so that he does not need any other company to intervene in the
+                project and his dealings with our company are guaranteed by our company.</p> 
+         </div>
+        </div> 
+      </div>
+
+      <div class="chiled about eff">
+        <div class="container ">
+        <div class="d-link">
+            <img src="{% static 'img/about (7).png' %}" alt="">
+          </div>  
+          
+        <div class="titel about ">
+          <h2>Integration Methodology : </h2>
+          <p>Understanding the varied demands of different sectors
+            , we deliver a wide array of solutions. We dissect the
+             larger picture into components, addressing each individually,
+              and assigning different aspects to the various divisions within
+               INFRATECH. Our employees receive direct training from product
+                vendors, ensuring deep familiarity with a broad range of products
+                . This approach allows us to seamlessly integrate
+             different products and platforms to meet diverse needs.</p> 
+         </div>
+        </div> 
+      </div>
+
+      <div class="chiled about more">
+        <div class="container ">
+         <div class="d-link">
+            <img src="{% static 'img/cover1.png' %}" alt="">
+          </div>  
+          
+        <div class="titel about">
+          <h2>Previous work :  </h2>
+          <p><p class="infra ">
+            INFRATECH has a proven track record of delivering successful projects
+             for clients across various sectors. Some of our noteworthy projects include: 
+          </p>
+          
+          1 - Nursing Technical Institute in Port Said: 35 cameras, 2 sub-racks, 1 main rack, 5 viewing points. <br>
+          2 - Cleanliness Authority, Mokattam Garage site: 106 cameras, 1 1 subracks,
+           1 main rack, 2 viewing points - a fully equipped control room with airconditioned data center and panels. <br>
+
+           <div id="collapse" style="display:none">
+            <p class="d-link">3 - Supreme Council of Universities at Cairo University: 96 cameras. <br>
+              4 - Administration building of Alfa Labs in Mohandeseen : 350 cameras.<br> 
+              5- South Sinai Security Directorate: 1 95 cameras distributed over 6 sites.
+               South Sinai Security Directorate: 3 Central Security Camps: El-Tor,
+                Sharm EISheikh, Nuweiba, Prison, Deportations.<br>
+              6- Japanese University: 264 cameras. <br>
+              7- AIShorouk International School: 148 cameras, 7 sub-racks, 1 main rack. <br>
+              8- Ain Shams University Science Building: 12 cameras, 2 main racks. <br>
+              9 - Ain Shams University Arts Building: 14 cameras, 2 main racks. <br>
+              10 - Al-Ahram Tech Factory: internal internet network, 25 points, 2 main racks. <br>
+              11 - EGY FARE Factory internal internet network 30. two main racks, 148 access door .<br>
+              12- The Turkish company Egypt Assistance: performs maintenance on all UPS devices to
+               maintain uninterrupted power and supplies a large number of 3 kilo and 10 kilo UPS devices.<br>
+              13 -  Abu Dhabi Commercial Bank project, Assiut branch: Replacement and renewal work
+               for all bank systems: Samsung surveillance cameras - GST fire alarm system - Texecom 
+               burglary alarm system - Apollo FM200 fire extinguishing system - access control hst
+                door control system. It was delivered to the bank with a one-year guarantee from our company.<br>
+                14 - The sales building in the Ras El Hekma Universe project, affiliated with Mabanee Idris Company: 
+                Hikvision surveillance camera system - Apollo address fire alarm system - DSPA audio system 
+                - internal internet system - UPS Dalton 20 kilo power outage protection device - internal
+                 internet system and its rack, switches, server and firewall - meeting room consisting 
+                 of a linked projector With a special acoustic system for the room, the project was
+                  successfully delivered with a one-year warranty for the project.<br>
+                15 - creation led factory Installation of a complete surveillance system with 32 Samsung 
+                Wisnet cameras Installing an intercom and access control system at the same time to open the doors.<br>
+                16 - Implementation of an administrative headquarters for Icarus Electric Vehicles Company: 
+                Camera surveillance system - internal central - internal wired and wireless Internet - 
+                access control system for doors, attendance and departure.<br>
+                17 - Implementation of the office of the leading import and export company Internal 
+                wired and wireless Internet system - surveillance camera system - system - internal 
+                central system - office central shower system - attendance and departure device.<br></p>
+        </div>
+        <a href="#collapse" class="nav-toggle">Read More</a>
+          </div>
+        </div>
+        </div>
+          
+       
+       </div> 
+      </div>
+
+      <div class = "containers">
+        <div class="container">
+          <div class = "row">
+            <h1 class = "text-center">Our Services</h1>
+            <p class = "fw-light w-75 mx-auto text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque est neque facilis debitis, repellat dolorem.</p>
+        </div>
+        </div>
+  
+    <div class = "row g-4 my-3 mx-auto owl-carousel owl-theme">
+  
+  {% for cat in category|slice:':6' %}
+        <div class = "col product-item mx-auto">
+          <a href = "{% url 'services' %}">
+             <div class = "product-img">
+               <img src="{{cat.photo.url}}" alt = "{{cat.name}}" class = "img-fluid d-block mx-auto">                                     
+             </div>
+              <div class = "product-info p-3">
+                <span class = "d-block text-dark text-decoration-none py-2 product-name">{{cat.name}}</span>                  
+             </div>
+          </a>
+        </div>
+{% endfor %}
+            
+        </div>
+      </div>
+      
+{% endblock %}

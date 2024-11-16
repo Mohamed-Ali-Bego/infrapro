@@ -1,0 +1,173 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg p-0">
+    <div class="container">
+      <a class="navbar-logo" href="{% url 'index' %}">
+        <img src="{% static 'img/logo.png' %}" alt="" class="nav__logo">
+    </a>
+          
+      <div class="collapse navbar-collapse show" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li 
+          {% if '/' == request.path %}
+            class="nav-item active"
+          {% else %}
+            class="nav-item"
+          {% endif %}
+          >
+            <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>
+          <li
+          {% if 'services' in request.path %}
+            class="nav-item active"
+          {% else %}
+            class="nav-item"
+          {% endif %} 
+          >
+            <a class="nav-link" href="{% url 'services' %}">Services</a>
+          </li>
+          <li 
+          {% if 'products' in request.path %}
+            class="nav-item active"
+          {% else %}
+            class="nav-item"
+          {% endif %}
+          >
+            <a class="nav-link" href="{% url 'products' %}">Products</a>
+          </li>      
+          <li
+          {% if 'about' in request.path %}
+            class="nav-item active"
+          {% else %}
+            class="nav-item"
+          {% endif %}
+          >
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+
+            <!-- <a class="nav-link" href="#" data-bs-toggle="modal" 
+            data-bs-target="#exampleModal">Contact</a> -->
+          </li>
+          
+        </ul>
+        
+      </div>
+      
+      <div class="navbar__actions">
+        <!-- Search button -->
+        <div class="search-btn efe" id="searchBbtn">
+          <button class="searCHbtn">
+            <a class="search__link" href="#">
+              <i class="nav__search ri-search-line" id="toggler-btn"></i>
+            </a>
+          </button>              
+        </div>
+        <div class="close efe toggle-xs" id="toggleXs">
+          <button class="toggler-nav">
+            <a class="toggler__link" href="#">
+              <i class="toggler__icon ri-close-line" id="toggler-btn"></i>
+            </a>  
+          </button>  
+        </div>  
+        <!-- contact button -->  
+         <div class="contact-btn" id="loginNbtn">
+          <button class="contactt-btn">
+            <!-- <button class="contactt-btn" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
+            <a class="contact__link" href="{% url 'contact' %}">
+              <i class="nav__login ri-user-line" ></i id="login-btn"> 
+            </a>  
+          </button>
+         
+         </div>
+         <!-- <div class="toggle-x close efe" id="toggleX">
+          <button class="toggler-nav">
+            <a class="toggler__link" href="#">
+              <i class="toggler__icon ri-close-line" id="toggler-btn"></i>
+            </a>  
+          </button>  
+        </div>  -->
+        
+        
+        <!-- toggle button -->
+        <div class="toggle-btn" id="togglerRbtn">
+          <button class="toggler-nav" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            <a class="toggler__link" href="#">
+              <i class="toggler__icon ri-menu-line" id="toggler-btn"></i>
+            </a>  
+          </button>  
+        </div>   
+            
+    </div>
+      
+    </div>
+  </nav> 
+
+  <div class="cont-log navi modal fade" id="exampleModal2" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog m-0" role="document">
+      <div class="modal-content border-0">                 
+        <div class="toggle-list">
+          
+          <ul class="navbar-nav">
+            
+            <li class="nav-item nav-d-t bb2">
+              <button class="contactt-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a class="contact__link" href="#">
+                  <i class="nav__login ri-user-line" ></i id="login-btn"> 
+                </a>  
+              </button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </li>
+
+            <li class="nav-item nav-d-t">
+              <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item nav-d-t">
+              <a class="nav-link" href="{% url 'services' %}">Servises</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'products' %}">Products</a>
+            </li>     
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+          </ul>
+          <div class="contact-all d-none">
+            <div class="contact-m">
+            <a class="contact-mm" href="#">
+              <i class="fa-brands fa-facebook-messenger "></i>
+            </a>
+            </div>
+            <div class="contact-w">
+            <a class="contact-ww" href="https://api.whatsapp.com/send?phone=201000970911">
+              <i class="fa-brands fa-whatsapp btn-lg 
+              "></i>
+            </a>
+            </div>
+            <div class="contact-ph">
+            <a class="contact-pp" href="#">
+              <i class="fa-solid fa-phone "></i>
+            </a>
+            </div>
+       </div>       
+        </div>             
+      </div>
+    </div>
+  </div>
+  <!------------------- search group start ------------------->
+  <div class="search-btns" id="SearchBtns">
+    
+    <div class="input-search">
+      <form action="{% url 'products' %}">
+        <div class="input-group">
+          <input type="search" class="form-control rounded-0" name="searchname" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+          <button type="submit" class="btn" aria-label="Search" aria-describedby="search-addon" data-mdb-ripple-init>Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!------------------- search group end ------------------->
+ 
