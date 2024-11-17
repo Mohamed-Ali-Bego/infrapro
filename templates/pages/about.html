@@ -46,19 +46,19 @@
   <!------------------- main serv start ------------------->     
   <div class="container">
     <div class="main-serv">
-      <div class="loow">
+      <div class="loow shadow border-0 m-2">
         <a href="{% url 'services' %}">
           <i class="fa-solid fa-screwdriver-wrench"></i>
           <p>Services</p>
         </a>
       </div>
-      <div class="loow">
+      <div class="loow shadow border-0 m-2">
         <a href="{% url 'contact' %}">
           <i class="fa-solid fa-comments"></i>
           <p>Contact</p>
         </a>
       </div>
-      <div class="loow">
+      <div class="loow shadow border-0 m-2">
         <a href="{% url 'about' %}">
           <i class="fa-solid fa-address-card"></i>
           <p>About</p>
@@ -70,7 +70,7 @@
   <!------------------- main serv end ------------------->  
   <!------------------- contact-be whats app ------------------->     
   <div class="contact-be">
-    <div class="whatsapp">
+    <div class="whatsapp shadow border-0">
       <a href="https://api.whatsapp.com/send?phone=201000970911">
            <i class="fa-brands fa-whatsapp"></i>
         </a>
@@ -86,7 +86,7 @@
     <div class="parent">
       <div class="chiled about">
         <div class="container">
-          <div class="img1">
+          <div class="img1 shadow border-0">
             <img src="{% static 'img/ab.png' %}" alt="">
           </div>
            <div class="titel about">
@@ -106,7 +106,7 @@
       </div>
       <div class="chiled about eff">
         <div class="container">
-          <div class="">
+          <div class=" shadow border-0 ">
             <img src="{% static 'img/about (2).png' %}" alt="">
           </div>
            <div class="titel about ">
@@ -126,7 +126,7 @@
 
       <div class="chiled about">
         <div class="container ">
-        <div class="d-link">
+        <div class="d-link shadow border-0">
             <img src="{% static 'img/about (6).png' %}" alt="">
           </div>         
         <div class="titel about">
@@ -142,7 +142,7 @@
 
       <div class="chiled about eff">
         <div class="container ">
-        <div class="d-link">
+        <div class="d-link shadow border-0">
             <img src="{% static 'img/about (7).png' %}" alt="">
           </div>  
           
@@ -162,7 +162,7 @@
 
       <div class="chiled about more">
         <div class="container ">
-         <div class="d-link">
+         <div class="d-link shadow border-0">
             <img src="{% static 'img/cover1.png' %}" alt="">
           </div>  
           
@@ -223,14 +223,14 @@
         <div class="container">
           <div class = "row">
             <h1 class = "text-center">Our Services</h1>
-            <p class = "fw-light w-75 mx-auto text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque est neque facilis debitis, repellat dolorem.</p>
+            <p class = "fw-light w-75 mx-auto text-center mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque est neque facilis debitis, repellat dolorem.</p>
         </div>
         </div>
   
     <div class = "row g-4 my-3 mx-auto owl-carousel owl-theme">
   
   {% for cat in category|slice:':6' %}
-        <div class = "col product-item mx-auto">
+        <div class = "col product-item mx-auto shadow border-0 m-4">
           <a href = "{% url 'services' %}">
              <div class = "product-img">
                <img src="{{cat.photo.url}}" alt = "{{cat.name}}" class = "img-fluid d-block mx-auto">                                     

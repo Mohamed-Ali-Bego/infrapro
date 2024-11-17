@@ -45,20 +45,20 @@
   <!------------------- main serv start ------------------->     
   <div class="container">
     <div class="main-serv">
-      <div class="loow">
+      <div class="loow shadow border-0 m-2">
         <a href="{% url 'services' %}">
           <i class="fa-solid fa-screwdriver-wrench"></i>
           <p>Services</p>
         </a>
       </div>
-      <div class="loow">
+      <div class="loow shadow border-0 m-2">
         <a href="#" data-bs-toggle="modal" 
            data-bs-target="#exampleModal">
           <i class="fa-solid fa-comments"></i>
           <p>Contact</p>
         </a>
       </div>
-      <div class="loow">
+      <div class="loow shadow border-0 m-2">
         <a href="{% url 'about' %}">
           <i class="fa-solid fa-address-card"></i>
           <p>About</p>
@@ -70,7 +70,7 @@
   <!------------------- main serv end ------------------->  
   <!------------------- contact-be whats app ------------------->     
   <div class="contact-be">
-    <div class="whatsapp">
+    <div class="whatsapp shadow border-0">
     <a href="https://api.whatsapp.com/send?phone=201000970911">
            <i class="fa-brands fa-whatsapp"></i>
         </a>
@@ -93,7 +93,7 @@
           <div class="btn-group d-block" role="group" aria-label="Basic example">
 {% for cat in category %}    
     <a class="page-link d-inline-flex" href="?category={{cat.name}}">
-         <button type="submit" class="btn mt-1 border-0 rounded-0 {% if request.GET.category == cat.name %} active {% endif %}">{{cat.name}}</button>
+         <button type="submit" class="btn mt-1  shadow border-0 m-1 rounded-0 {% if request.GET.category == cat.name %} active {% endif %}">{{cat.name}}</button>
     </a>
 {% endfor %} 
             
@@ -110,7 +110,7 @@
 {% for pro in products %}
       <div  class = "col  d-link">
         <a href = "{% url 'product' pro_id=pro.id %}">
-        <div class = "card product-item">
+        <div class = "card product-item shadow border-0">
 
             <div class="product-img">
               <img src="{{pro.photo.url}}" alt = "{{pro.name}}" class = "img-fluid d-block mx-auto"> 
@@ -132,22 +132,22 @@
 {% if products.has_other_pages %}
  
           <nav aria-label="Page navigation example">
-            <ul class="pagination  mb-4 mt-5 d-flex justify-content-center">
+            <ul class="pagination mb-4 mt-5 d-flex justify-content-center">
               {% if products.has_previous %}
                     <li class="page-item">                
-                      <a class="page-link border-0" href="?page={{products.previous_page_number}}" aria-label="Previous">
+                      <a class="page-link shadow border-0" href="?page={{products.previous_page_number}}" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                         <span class="sr-only">Previous</span>
                       </a>               
                     </li>
               {% endif %}
               {% for i in products.paginator.page_range %}
-                    <li class="page-item "><a class="page-link border-0 {% if products.number == i %} active {% endif %}" href="?page={{i}}">{{i}}</a></li>
+                    <li class="page-item "><a class="page-link shadow border-0 {% if products.number == i %} active {% endif %}" href="?page={{i}}">{{i}}</a></li>
               {% endfor %}
 
               {% if products.has_next %}
                     <li class="page-item ">             
-                          <a class="page-link border-0" href="?page={{products.next_page_number}}" aria-label="Next">
+                          <a class="page-link shadow border-0" href="?page={{products.next_page_number}}" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
                             <span class="sr-only">Next</span>
                           </a>                
