@@ -270,6 +270,7 @@ body {
   position: relative;
   font-size: 28px;
   font-weight: bold;
+  padding-bottom: 7px;
 }
 .right h2:after, .title-1 h1:after {
   content: '';
