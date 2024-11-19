@@ -81,7 +81,7 @@
 
   <div class = "containers">
     <div class="container">
-      <div class = "row">
+      <div class = "row title-1">
         <h1 class = "text-center">Products</h1>              
         <p class = "fw-light w-75 mx-auto text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
            Cumque est neque facilis debitis, repellat dolorem.</p>    
@@ -108,7 +108,7 @@
   
     
 {% for pro in products %}
-      <div  class = "col  d-link">
+      <div  class = "col mb-1 d-link">
         <a href = "{% url 'product' pro_id=pro.id %}">
         <div class = "card product-item shadow border-0">
 
@@ -117,7 +117,7 @@
             </div>                               
         
           <div class = "product-info p-3">             
-            <h6 class = "product-type">{{pro.name}}</h6>       
+            <h5 class = "product-type">{{pro.name}}</h5>       
               <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">{{pro.description}}</a>                
           </div>
         </div>
@@ -132,7 +132,7 @@
 {% if products.has_other_pages %}
  
           <nav aria-label="Page navigation example">
-            <ul class="pagination mb-4 mt-5 d-flex justify-content-center">
+            <ul class="pagination mb-4 mt-4 d-flex justify-content-center">
               {% if products.has_previous %}
                     <li class="page-item">                
                       <a class="page-link shadow border-0" href="?page={{products.previous_page_number}}" aria-label="Previous">

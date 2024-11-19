@@ -80,7 +80,7 @@
 
   <div class="containers fff">
     <div class="container">
-      <div class="services-title">
+      <div class="services-title title-1">
         <h1>Services</h1>
     </div>
     <div class="services-cards">
@@ -90,7 +90,7 @@
 {% for cat in category %}
 <div class="col">
   <a href="{% url 'products' %}">
-    <div class="card shadow border-0">
+    <div class="card shadow border-0 d-link">
       <img src="{{cat.photo.url}}" class="card-img-top" alt= "{{cat.name}}">
       <div class="product-info">
         <h6 class="d-block text-dark text-decoration-none py-2 product-name">{{cat.name}}</h6>                  
@@ -109,7 +109,7 @@
 <div class = "containers">
     
     <div class="container">
-      <div class = "row">
+      <div class = "row title-1">
         <h1 class = "text-center">Featured Products</h1>
         <p class = "fw-light w-75 mx-auto text-center mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque est neque facilis debitis, repellat dolorem.</p>
       </div>

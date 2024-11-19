@@ -266,7 +266,12 @@ body {
   margin-bottom: 20px;
   font-family: "Syne", sans-serif;
 }
-.right h2:after {
+.title-1 h1 {
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+}
+.right h2:after, .title-1 h1:after {
   content: '';
   position: absolute;
   left: 50%;
@@ -519,10 +524,9 @@ body {
 /*************** about *********************/
 /*********** slider ***************/
 
-.text-center {}
+
 .product-item{
   box-shadow: 0 0.5rem 1rem rgb(117 117 117 / 18%);
-  border: 1px solid rgb(71 71 71 / 22%);
   border-radius: 10px;
 }
 .product-img{
@@ -531,34 +535,27 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
-.product-type{ 
-  color: #111;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-
-.product-name{
-  transition: all 0.3s ease-in-out;
-}
-.product-name:hover{
-  color: var(--2th-color)!important;
-}
-.product-item{
-  /* width: 300px; */
-}
 .product-info {
   background-color: var(--3th-color);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   text-align: center;
 }
-.product-name.tet  {
-  font-size: 14px;
+.product-type{ 
+  color: #111;
+  font-weight: bold;
+  font-size: 17px;
+  opacity: 0.8;
+}
+.product-name {
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
   transition: all 0.3s ease-in-out;
   font-weight: 700;
   text-align: center;
+}
+.product-name:hover{
+  color: var(--2th-color)!important;
 }
 /*********** slider ***************/
 
